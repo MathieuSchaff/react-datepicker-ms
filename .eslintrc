@@ -1,0 +1,52 @@
+{
+  //https://eslint.org/docs/latest/use/core-concepts
+  "root": true,
+  "extends": [
+    "prettier",
+    "plugin:prettier/recommended",
+    // tells ESLint that your config extends the given configurations
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  //Custom parsers let ESLint parse non-standard JavaScript syntax.
+  // tells ESLint to use the @typescript-eslint/parser package you installed to parse your source files.
+  //This is required, or else ESLint will throw errors as it tries to parse TypeScript code as if it were regular JavaScript.
+  "parser": "@typescript-eslint/parser",
+  //An ESLint plugin is an npm module that can contain a set of ESLint rules,
+  // configurations, processors, and environments.
+  //Often plugins include custom rules. Plugins can be used to enforce a style guide and support JavaScript extensions (like TypeScript)
+  "plugins": [
+    //tells ESLint to load the @typescript-eslint/eslint-plugin package as a plugin
+    "@typescript-eslint",
+    "prettier",
+    //short for eslint-plugin-react
+    "react",
+    "react-hooks"
+  ],
+  //Rules are the core building block of ESLint.
+  // A rule validates if your code meets a certain expectation,
+  // and what to do if it does not meet that expectation.
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  // which environments your script is designed to run in.
+  //Each environment brings with it a certain set of predefined global variables.
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "JSX": true
+  }
+}
