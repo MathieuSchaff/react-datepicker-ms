@@ -1,5 +1,5 @@
 {
-  "name": "react-datepicker-ms",
+  "name": "react-datepicker-msfns",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/cjs/index.js",
@@ -19,9 +19,22 @@
     "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
     "test": "jest --config jestconfig.json"
   },
-  "keywords": [],
-  "author": "Mathieu Schaff",
-  "license": "ISC",
+  "author": "Mathieu Schaff (MathieuSchaff)",
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "react-datepicker-msfns",
+    "react datepicker",
+    "typescript datepicker",
+    "react-datepicker-ms"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
