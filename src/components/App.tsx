@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { format } from 'date-fns'
 type Props = {
   value?: number
 }
@@ -9,8 +8,6 @@ const MyCounter = ({ value = 0 }: Props) => {
   const onMinus = () => {
     setCounter((prev) => prev - 1)
   }
-
-  console.log('MyCounter', format(new Date(), 'yyyy'))
 
   const onPlus = () => {
     setCounter((prev) => prev + 1)
